@@ -4,8 +4,30 @@ from  base import BaseHandler
 
 class INDEX_Handler(BaseHandler):
     def get(self):
-        z_list = ['我秀','风云','映客','奇秀','战旗','火猫','斗鱼', '虎牙','熊猫','龙珠','小米','陌陌','芒果','美播','腾讯','水晶','九游','六间房']
-        _dict = {'z_list': z_list }
+        print self.request.arguments
+        define_dict = dict (
+             woxiu = '我秀',
+             fengyu = '风云',
+             inke = '映客',
+             qixiu = '奇秀',
+             zhanqi = '战旗',
+             huomao = '火猫',
+             douyu = '斗鱼',
+             huya = '虎牙',
+             xiongmao = '熊猫',
+             longzhu = '龙珠',
+             xiaomi = '小米',
+             momo = '陌陌',
+             mangguo = '芒果',
+             meibo = '美博',
+             tengxun = '腾讯',
+             shuijing = '水晶',
+             jiuyou = '九游',
+             liujianfang = '六间房',
+
+            )
+        _dict = {'define_dict':define_dict}
+
         self.render("index.html",**_dict)
         
 
